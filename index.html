@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUSexplore | Элитные туры по Камчатке</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-mountain"></i>
+                RUSexplore
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#tours">Туры</a></li>
+                    <li><a href="#questionnaire">Анкета</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#safety">Безопасность</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <canvas id="three-canvas"></canvas>
+        <div class="hero-content">
+            <h1>Эксклюзивные туры по Камчатке</h1>
+            <p>Откройте для себя первозданную красоту Камчатки с индивидуальными маршрутами премиум-класса</p>
+            <div class="btn-container">
+                <a href="#questionnaire" class="btn">Создать индивидуальный тур</a>
+                <a href="#tours" class="btn btn-outline">Изучить предложения</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Элитный отдых на Камчатке</h2>
+                <p>RUSexplore предлагает эксклюзивные туры премиум-класса для искушенных путешественников, ценящих комфорт и уникальные впечатления</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-route"></i>
+                    <h3>Индивидуальные маршруты</h3>
+                    <p>Мы создаем эксклюзивные туры, полностью соответствующие вашим предпочтениям и интересам.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Персональные гиды</h3>
+                    <p>Наши гиды - эксперты высочайшего уровня, которые обеспечат вам максимальный комфорт и безопасность.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Премиальная безопасность</h3>
+                    <p>В каждом туре минимум 2 гида и современное оборудование для обеспечения вашей безопасности.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tours" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Эксклюзивные туры</h2>
+                <p>Мы предлагаем уникальные маршруты по Камчатке, сочетающие комфорт, приключения и роскошь</p>
+            </div>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <div class="tour-price">450 000 ₽</div>
+                        Гастрономический тур
+                    </div>
+                    <div class="tour-content">
+                        <h3>Гастрономическое путешествие премиум-класса</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 5 дней</span>
+                            <span><i class="fas fa-user-friends"></i> 1-2 человека</span>
+                        </div>
+                        <p class="tour-description">Эксклюзивный гастротур с дегустациями морепродуктов, мастер-классами от шеф-поваров и ужинами в уникальных локациях с панорамными видами.</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <div class="tour-price">1 200 000 ₽</div>
+                        Романтический тур
+                    </div>
+                    <div class="tour-content">
+                        <h3>Тур "Небесная романтика" для пар</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 7 дней</span>
+                            <span><i class="fas fa-user-friends"></i> 2 человека</span>
+                        </div>
+                        <p class="tour-description">Роскошное путешествие для влюбленных: частные вертолетные экскурсии, ужины при свечах у термальных источников, проживание в люксовых лоджах.</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                
+                <div class="tour-card">
+                    <div class="tour-image">
+                        <div class="tour-price">850 000 ₽</div>
+                        Приключенческий тур
+                    </div>
+                    <div class="tour-content">
+                        <h3>Экспедиция "Вершины Камчатки"</h3>
+                        <div class="tour-meta">
+                            <span><i class="far fa-clock"></i> 10 дней</span>
+                            <span><i class="fas fa-user-friends"></i> Группа до 6 человек</span>
+                        </div>
+                        <p class="tour-description">Эксклюзивное восхождение на вулканы с профессиональными альпинистами, посещение Долины гейзеров и отдых в премиальных термальных комплексах.</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наша команда</h2>
+                <p>Профессиональные гиды и эксперты с многолетним опытом работы в сфере элитного туризма</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Алексей Петров</h3>
+                    <p class="member-role">Главный гид-эксперт</p>
+                    <p class="member-description">Опыт работы гидом на Камчатке - 15 лет. Специализируется на эксклюзивных маршрутах и экспедициях премиум-класса.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Мария Сидорова</h3>
+                    <p class="member-role">Гид по культуре и гастрономии</p>
+                    <p class="member-description">Эксперт по традициям коренных народов Камчатки и автор уникальных гастрономических программ для взыскательных клиентов.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Дмитрий Иванов</h3>
+                    <p class="member-role">Гид по дикой природе</p>
+                    <p class="member-description">Биолог с 20-летним стажем. Организует эксклюзивные туры для наблюдения за медведями, китами и другими обитателями Камчатки.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Елена Козлова</h3>
+                    <p class="member-role">Менеджер премиум-туров</p>
+                    <p class="member-description">Обеспечивает безупречную организацию всех деталей вашего путешествия, от VIP-трансферов до размещения в люксовых лоджах.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="questionnaire">
+        <div class="container">
+            <div class="section-title">
+                <h2>Создайте свой идеальный тур</h2>
+                <p>Заполните анкету, и мы разработаем для вас эксклюзивный маршрут по Камчатке</p>
+            </div>
+            <div class="questionnaire">
+                <form id="tour-form" class="modern-form">
+                    <div class="form-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-user"></i>
+                            Личная информация
+                        </h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label class="form-label">Ваш пол</label>
+                                <div class="radio-group modern-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" id="male" name="gender" value="male" class="radio-input">
+                                        <label for="male" class="radio-label">
+                                            <span class="radio-custom"></span>
+                                            Мужской
+                                        </label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="female" name="gender" value="female" class="radio-input">
+                                        <label for="female" class="radio-label">
+                                            <span class="radio-custom"></span>
+                                            Женский
+                                        </label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="not-specified" name="gender" value="not-specified" class="radio-input">
+                                        <label for="not-specified" class="radio-label">
+                                            <span class="radio-custom"></span>
+                                            Предпочитаю не указывать
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group half-width">
+                                <label for="age" class="form-label">Ваш возраст</label>
+                                <select id="age" class="modern-select" name="age">
+                                    <option value="" disabled selected>Выберите возраст</option>
+                                    <option value="under-18">до 18 лет</option>
+                                    <option value="18-30">18-30 лет</option>
+                                    <option value="31-45">31-45 лет</option>
+                                    <option value="46-60">46-60 лет</option>
+                                    <option value="over-60">старше 60 лет</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-heart"></i>
+                            Ваши интересы
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Ваши хобби и интересы</label>
+                            <div class="checkbox-grid">
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="photography" name="interests" value="photography" class="checkbox-input">
+                                    <label for="photography" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-camera icon"></i>
+                                            Фотография
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="hiking" name="interests" value="hiking" class="checkbox-input">
+                                    <label for="hiking" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-hiking icon"></i>
+                                            Пеший туризм
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="fishing" name="interests" value="fishing" class="checkbox-input">
+                                    <label for="fishing" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-fish icon"></i>
+                                            Рыбалка
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="extreme" name="interests" value="extreme" class="checkbox-input">
+                                    <label for="extreme" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-mountain icon"></i>
+                                            Экстрим
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="wildlife" name="interests" value="wildlife" class="checkbox-input">
+                                    <label for="wildlife" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-paw icon"></i>
+                                            Дикая природа
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="culture" name="interests" value="culture" class="checkbox-input">
+                                    <label for="culture" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-landmark icon"></i>
+                                            Культура
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-map-marked-alt"></i>
+                            Опыт путешествий
+                        </h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label class="form-label">Опыт походов по дикой природе</label>
+                                <div class="radio-group modern-radio">
+                                    <div class="radio-item">
+                                        <input type="radio" id="experience-yes" name="experience" value="yes" class="radio-input">
+                                        <label for="experience-yes" class="radio-label">
+                                            <span class="radio-custom"></span>
+                                            Да, есть опыт
+                                        </label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="experience-no" name="experience" value="no" class="radio-input">
+                                        <label for="experience-no" class="radio-label">
+                                            <span class="radio-custom"></span>
+                                            Нет опыта
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group half-width">
+                                <label for="fitness" class="form-label">Уровень физической подготовки</label>
+                                <select id="fitness" class="modern-select" name="fitness">
+                                    <option value="" disabled selected>Выберите уровень</option>
+                                    <option value="beginner">Начальный</option>
+                                    <option value="amateur">Любитель</option>
+                                    <option value="experienced">Опытный</option>
+                                    <option value="professional">Профессионал</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-running"></i>
+                            Предпочтения по активностям
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Какие активности вас интересуют?</label>
+                            <div class="checkbox-grid">
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="volcano" name="activities" value="volcano" class="checkbox-input">
+                                    <label for="volcano" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-mountain icon"></i>
+                                            Восхождение на вулканы
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="hot-springs" name="activities" value="hot-springs" class="checkbox-input">
+                                    <label for="hot-springs" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-hot-tub icon"></i>
+                                            Термальные источники
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="rafting" name="activities" value="rafting" class="checkbox-input">
+                                    <label for="rafting" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-water icon"></i>
+                                            Сплав по рекам
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="geysers" name="activities" value="geysers" class="checkbox-input">
+                                    <label for="geysers" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-fire icon"></i>
+                                            Долина гейзеров
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="helicopter" name="activities" value="helicopter" class="checkbox-input">
+                                    <label for="helicopter" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-helicopter icon"></i>
+                                            Вертолетные экскурсии
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="modern-checkbox">
+                                    <input type="checkbox" id="whale-watching" name="activities" value="whale-watching" class="checkbox-input">
+                                    <label for="whale-watching" class="checkbox-label">
+                                        <span class="checkbox-custom">
+                                            <i class="fas fa-check check-icon"></i>
+                                        </span>
+                                        <span class="checkbox-text">
+                                            <i class="fas fa-person icon"></i>
+                                            Экстремальный серфинг
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-heading">
+                            <i class="fas fa-calendar-alt"></i>
+                            Детали путешествия
+                        </h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="duration" class="form-label">Продолжительность тура</label>
+                                <select id="duration" class="modern-select" name="duration">
+                                    <option value="" disabled selected>Выберите продолжительность</option>
+                                    <option value="short">3-5 дней</option>
+                                    <option value="standard">6-9 дней</option>
+                                    <option value="immersion">10-14 дней</option>
+                                    <option value="long">более 2 недель</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-arrow"></i>
+                            </div>
+                            
+                            <div class="form-group half-width">
+                                <label for="companion" class="form-label">Состав группы</label>
+                                <select id="companion" class="modern-select" name="companion">
+                                    <option value="" disabled selected>Выберите вариант</option>
+                                    <option value="alone">Путешествую один/одна</option>
+                                    <option value="couple">Пара / вдвоем</option>
+                                    <option value="friends">Компания друзей</option>
+                                    <option value="family">Семейный отдых</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Бюджет на одного человека (руб.)</label>
+                            <div class="input-with-icon">
+                                <input type="number" id="budget" class="modern-input" name="budget" placeholder="Введите сумму">
+                                <i class="fas fa-ruble-sign input-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section submit-section">
+                        <button type="submit" class="btn modern-submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Отправить анкету
+                            <span class="btn-shine"></span>
+                        </button>
+                        <p class="form-note">После отправки анкеты наш менеджер свяжется с вами в течение 24 часов для уточнения деталей</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="safety">
+        <div class="container">
+            <div class="section-title">
+                <h2>Безопасность и комфорт</h2>
+                <p>Мы обеспечиваем высочайший уровень безопасности и комфорта для наших клиентов</p>
+            </div>
+            <div class="safety-grid">
+                <div class="safety-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Персональные гиды</h3>
+                    <p>Минимум 2 профессиональных гида в каждом туре для обеспечения максимальной безопасности и комфорта.</p>
+                </div>
+                <div class="safety-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Медицинское сопровождение</h3>
+                    <p>Все наши гиды имеют сертификаты первой помощи и несут с собой расширенные аптечки.</p>
+                </div>
+                <div class="safety-item">
+                    <i class="fas fa-satellite-dish"></i>
+                    <h3>Связь и навигация</h3>
+                    <p>Используем спутниковые телефоны, GPS-навигаторы и современное оборудование даже в отдаленных районах.</p>
+                </div>
+                <div class="safety-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Страхование</h3>
+                    <p>Все участники туров застрахованы от несчастных случаев по программам премиум-класса.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Ответы на самые популярные вопросы о путешествиях премиум-класса по Камчатке</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Как создать уникальный маршрут для путешествия по Камчатке?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Наши эксперты разрабатывают индивидуальные маршруты на основе ваших предпочтений. Мы учитываем все пожелания: от активности до уровня комфорта, создавая эксклюзивную программу путешествия.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Что необходимо для бронирования тура премиум-класса?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Для бронирования необходимо заполнить анкету на нашем сайте и внести предоплату в размере 30% от стоимости тура. Оставшаяся сумма оплачивается за 30 дней до начала путешествия.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Можно ли изменить маршрут после бронирования?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы можем адаптировать маршрут по вашему желанию. Все изменения обсуждаются с персональным менеджером и вносятся в программу при возможности их реализации.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Сколько стоит эксклюзивный тур на Камчатку?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Стоимость индивидуальных туров премиум-класса начинается от 450 000 рублей за человека и зависит от продолжительности, уровня комфорта и включенных активностей.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какие достопримечательности можно увидеть на Камчатке?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>На Камчатке можно увидеть Долину гейзеров - одно из семи чудес России, более 300 вулканов (каждый десятый - активно действующий), чистые озера и реки, серные горячие источники и остров Старичков - зоологический памятник природы.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Что стоит взять с собой на Камчатку?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Рекомендуем взять ветровку и непромокаемую куртку, штаны с защитой от ветра и воды, удобные треккинговые ботинки, шапку, перчатки и теплый свитер, купальник и сланцы для термальных источников, солнцезащитные очки и крем, индивидуальную аптечку.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Где можно купить сувениры на Камчатке?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Практически всю сувенирную продукцию можно найти в Петропавловске-Камчатском, например, в магазине этнических сувениров «Нулевая верста», этно-салоне «Шаман» или в торговых центрах «Шамса» и «Комсомольская площадь». Также сувенирные лавки есть в популярных туристических местах.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Контакты</h2>
+                <p>Свяжитесь с нами для получения дополнительной информации или бронирования эксклюзивного тура</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Адрес</h3>
+                            <p>г. Петропавловск-Камчатский, ул. Ленинская, 35</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Телефон</h3>
+                            <p>+7 (415) 222-33-44</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>premium@rusexplore.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Режим работы</h3>
+                            <p>Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 16:00<br>Вс: выходной</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="modern-input" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="modern-input" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="modern-input" placeholder="Ваш телефон">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="modern-input" rows="5" placeholder="Ваше сообщение" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>RUSexplore Premium</h3>
+                    <p>Эксклюзивные туры премиум-класса по Камчатке для искушенных путешественников, ценящих комфорт и уникальные впечатления.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Наши туры</h3>
+                    <ul>
+                        <li><a href="#">Гастрономические туры</a></li>
+                        <li><a href="#">Активные туры</a></li>
+                        <li><a href="#">Культурные туры</a></li>
+                        <li><a href="#">Индивидуальные туры</a></li>
+                        <li><a href="#">Групповые туры</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Полезные ссылки</h3>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#tours">Туры</a></li>
+                        <li><a href="#questionnaire">Анкета</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Петропавловск-Камчатский</li>
+                        <li><i class="fas fa-phone-alt"></i> +7 (415) 222-33-44</li>
+                        <li><i class="fas fa-envelope"></i> premium@rusexplore.ru</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 RUSexplore Premium. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="anim.js"></script>
+</body>
+</html>
